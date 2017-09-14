@@ -26,14 +26,17 @@
        position: relative;
     }
     .logo h1{
-        position: absolute;
-        background-color: #FFFFFF !important;
-        padding: 20px;
+        background-color: #FF00DD !important;
+        left: 300px;
         color: white;
+        position: relative;
+
 
     }
     .anketos-bg {
         background-color: white;
+        padding: 20px;
+
     }
     .long-bg {
         background-color: #FF00DD;
@@ -44,4 +47,9 @@
     .carousel{
         background-color: #FF00DD !important;
     }
-   
+    .center{
+        text-align: center;
+    }
+    .col-patraukimas{
+        margin-top: 10%;
+    }
