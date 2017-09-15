@@ -14,51 +14,56 @@
 </head>
 <body>
   <?php
-  $username = "root";
-  $password = "";
-  $host = "localhost";
+    $host = 'localhost';
+    $db   = 'nfqtest';
+    $user = 'root';
+    $pass = '';
+    $charset = 'utf8';
 
-  $connector = mysqli_connect($host,$username,$password)
-      or die("Unable to connect");
-    echo "Connections are made successfully:";
-  $selected = mysqli_select_db("nfqtest", $connector)
-    or die("Unable to connect");
-
-  //execute the SQL query and return records
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $opt = [
+      PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+      PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    $pdo = new PDO($dsn, $user, $pass, $opt);
   ?>
   <table class="table">
-  <thead>
+   <thead>
     <tr>
       <th>Numeris</th>
       <th>Vardas</th>
       <th>Lytis</th>
       <th>Svoris</th>
       <th>Ugis</th>
-      <th>Numeris</th>
+      <th>Telefonas</th>
       <th>El. pastas</th>
       <th>Norai</th>
     </tr>
+  </thead>
     <tbody>
+      
             <tr>
+
             <?php
-                if (!$connector) {
-                    die(mysqli_error($connector));
-                }
-    
-                $results = mysqli_query($connector,"SELECT * FROM 'klientai'");
+                $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
+                while ($row = $stmt->fetch()){
+                echo '<tr>' .
                 
-                while($row = mysqli_fetch_array($results)) {
-                ?>
-                        <?php echo '<td>'.$row['id'].'</td>'; ?>
-    
-    
-    
-                <?php
-                }
-                ?>
-                </tr>
-                </tbody>
+                    '<td>' . $row['id'] . '</td>' .
+                     '<td>' . $row['Name'] . '</td>' .
+                     '<td>' . $row['Gender'] . '</td>' .
+                     '<td>' . $row['Weight'] . '</td>' .
+                     '<td>' . $row['Height'] . '</td>'.
+                     '<td>' . $row['Phone'] . '</td>' .
+                     '<td>' . $row['Mail'] . '</td>'.
+                     '<td>' . $row['Comment'] . '</td> </tr>' ;
+                    
+                
+              };
+            ?>
+            </tr>
+            </tbody>
 </table>
- <?php mysql_close($connector); ?>
 </body>
 </html>
