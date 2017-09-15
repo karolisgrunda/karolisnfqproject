@@ -1,15 +1,14 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "nfqtest";
 
-$username="root";
-$password="password";
-$server="127.0.0.1";
-$database="dbname";
-
-$con = mysql_connect($server,$username,$password);
-mysql_select_db("dbname");
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-if (mysql_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 $name = $_POST['VARDAS'];
@@ -22,14 +21,15 @@ $comment = $_POST['KOMENTARAS'];
 
 
 
-$sql="INSERT INTO klientai (KName, KGender, KWeight, KHeight, KPhone, KEmail, KComment) VALUES 
+$sql = "INSERT INTO klientai (Name, Gender, Weight, Height, Phone, Mail, Comment) VALUES 
 ('".$name."','".$gender."','".$weight."','".$height."','".$phone."','".$email."','".$comment."')";
 
-if (!mysql_query($con,$sql)){
-  die('Error: ' . mysql_error($con));
-}
-echo "1 record added";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+};
 
-mysql_close($con);
+$conn->close();
 
 ?>
