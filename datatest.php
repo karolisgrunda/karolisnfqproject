@@ -42,23 +42,15 @@
     </tr>
   </thead>
     <tbody>
-       <tr>
-        <?php
-                $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
-                while ($row = $stmt->fetch()){
-                echo '<tr>' .
-                
-                    '<td>' . $row['id'] . '</td>' .
-                     '<td>' . $row['Name'] . '</td>' .
-                     '<td>' . $row['Gender'] . '</td>' .
-                     '<td>' . $row['Weight'] . '</td>' .
-                     '<td>' . $row['Height'] . '</td>'.
-                     '<td>' . $row['Phone'] . '</td>' .
-                     '<td>' . $row['Mail'] . '</td>'.
-                     '<td>' . $row['Comment'] . '</td> </tr>' ;
-                    
-              
-              };
+       <?php
+        $sql = $pdo->prepare("SELECT * FROM klientai");
+        $sql->execute();
+        while($result = $sql->fetch(PDO::FETCH_ASSOC)){
+        echo  
+        '<tr>' .
+        '<td>' . $result['Name'] . '</td> 
+         <td>' . $result['Gender'] . '</td>' . '</tr>'  ;
+        } ;
         ?>
       </tr>
     </tbody>
