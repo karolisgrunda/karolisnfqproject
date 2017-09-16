@@ -61,8 +61,13 @@
     h1 span { 
         background-color: #FF00DD;
         padding: 10px 10px 5px 5px; 
+        line-height: 160%;
     }
     .totop{
         color: #FF00DD;
-        margin-bottom: 10%;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .apacia{
+        height: 100px;
     }
