@@ -7,31 +7,15 @@
 
     .navbar {
         font-family: 'TT05';
-		padding-top: 10px;
-		padding-bottom: 10px;
 		border: 0;
 		border-radius: 0;
 		margin-bottom: 0;
 		font-size: 12px;
         letter-spacing: 5px;
-        background-color: #FFFFFF !important;
+        background-color: #FFFFFF;
 	}
 	.navbar-nav  li a:hover {
 		color: #FF00DD !important;
-    }
-
-    .logo{
-       margin-left: 20%;
-       margin-top: 1%;
-       position: relative;
-    }
-    .logo h1{
-        background-color: #FF00DD !important;
-        left: 300px;
-        color: white;
-        position: relative;
-
-
     }
     .anketos-bg {
         background-color: white;
@@ -52,4 +36,33 @@
     }
     .col-patraukimas{
         margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    header {
+        background-image:url(../images/logo.png);
+        height: 339px;
+        width: 100%;
+        background-size: initial;
+        background-repeat: no-repeat;
+        background-position: 30% 70%;
+        overflow: hidden;
+        position: relative;
+    }
+      
+    .group {
+        position: absolute;
+        width: 100%;
+        color: white;
+        bottom: 30%;
+        margin: 40px;
+        text-align: center;
+        display: inline-block;
+    }
+    h1 span { 
+        background-color: #FF00DD;
+        padding: 10px 10px 5px 5px; 
+    }
+    .totop{
+        color: #FF00DD;
+        margin-bottom: 10%;
     }
