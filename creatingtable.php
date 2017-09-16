@@ -12,7 +12,8 @@ if (!$conn) {
 }
 // sql to create table
 $sql = "CREATE TABLE klientai (
-id MEDIUMINT NOT NULL AUTO_INCREMENT,
+`id` INT(11) NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (`id`),
 Name VARCHAR(30) NOT NULL,
 Gender VARCHAR(10) NOT NULL,
 Weight INT(3),
