@@ -14,11 +14,10 @@
 </head>
 <body>
   <?php
-    $host = 'localhost';
-    $db   = 'nfqtest';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8';
+    $host = 'eu-cdbr-west-01.cleardb.com';
+    $db   = 'heroku_fb27e899e9e6887';
+    $user = 'bc27a370ba310d';
+    $pass = '39f73031';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
     $opt = [
