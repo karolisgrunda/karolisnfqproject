@@ -44,10 +44,10 @@
     <tbody>
        <tr>
         <?php
-                $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
+                $stmt = $pdo->query('SELECT ID, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
                 while ($row = $stmt->fetch()){
                   echo '<tr>' .
-                  '<td>' . $row['id'] . '</td>' .
+                  '<td>' . $row['ID'] . '</td>' .
                   '<td>' . $row['Name'] . '</td>' .
                   '<td>' . $row['Gender'] . '</td>' .
                   '<td>' . $row['Weight'] . '</td>' .
