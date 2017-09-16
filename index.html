@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -77,45 +78,54 @@
                     <div class="col-sm-6 anketos-bg">
                         <h3 class="center">Norint gauti sporto programa užsiregistruokite!</h3>
                         <br />
-                        <form action="tomysql.php" method="POST">
+                        <form id="regform" name="regform" data-toggle="validator" role="form">
                             <div class="form-group">
-                                <label for="vardas">.jūsų vardas</label>
-                                <input type="text" class="form-control" name="VARDAS" >
+                                <label for="vardas" class="control-label" >.jūsų vardas</label>
+                                <input type="text" class="form-control" maxlength="29" name="VARDAS" placeholder="Vardenis" required>
                             </div>
                             <div class="form-group">
-                                <label class="radio-inline"><input type="radio" name="LYTIS" value="VYRAS">Vyras</label>
-                                <label class="radio-inline"><input type="radio" name="LYTIS" value="MOTERIS">Moteris</label>
+                                <label class="radio-inline"><input type="radio" name="LYTIS" value="VYRAS" required>Vyras</label>
+                                <label class="radio-inline"><input type="radio" name="LYTIS" value="MOTERIS"required>Moteris</label>
                             </div>
                             <div class="form-group">
                                     <label for="svoris">.svoris</label>
-                                    <input type="text" class="form-control" name="SVORIS" >
+                                    <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}" maxlength="3" name="SVORIS" placeholder="Jūsų svoris kilogramais" required>
                             </div>
                             <div class="form-group">
                                     <label for="ugis">.ugis</label>
-                                    <input type="text" class="form-control" name="UGIS" >
+                                    <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}"  name="UGIS" placeholder="Jūsų ūgis centimetrais" required>
                             </div>
                             <div class="form-group">
                                     <label for="telefonas">.telefonas</label>
-                                    <input type="text" class="form-control" name="TELEFONAS" >
+                                    <input type="text" class="form-control" maxlength="8" pattern="[0-9]{8,}"  placeholder="6*******" name="TELEFONAS">
                             </div>
                             <div class="form-group">
                                     <label for="pastas">.el. paštas</label>
-                                    <input type="text" class="form-control" name="PASTAS" >
+                                    <input type="email" class="form-control" name="PASTAS" data-error="Bruh, that email address is invalid" required placeholder="vardenis@gmail.com" >
                             </div>
                             
                             <div class="form-group">
                                     <label for="comment">.ko tikitės iš trenerio</label>
-                                    <textarea class="form-control" rows="5" name="KOMENTARAS"></textarea>
+                                    <textarea class="form-control" rows="5" maxlength="250" name="KOMENTARAS" required></textarea>
                             </div>
-                                    <button type="submit" class="btn btn-block">siūsti 
+                                    <button type="submit" onclick="SubForm()" class="btn btn-block">siūsti 
                                     <span class="glyphicon glyphicon-ok"></span>
-                            </button>
+                                    </button>
                          </form>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <script>
+                function SubForm (){
+                    $.ajax({
+                        url:'tomysql.php',
+                        type:'post',
+                        data:$('#regform').serialize()  
+                        
+                    });
+                }
+        </script>
     </body>
 </html>

@@ -18,7 +18,7 @@ Gender VARCHAR(10) NOT NULL,
 Weight INT(3),
 Height INT(3),
 Phone INT(9),
-Mail VARCHAR(100),
+Mail VARCHAR(251),
 Comment TEXT,
 PRIMARY KEY (id)
 )";
