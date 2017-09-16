@@ -12,7 +12,7 @@ if (!$conn) {
 }
 // sql to create table
 $sql = "CREATE TABLE klientai (
-                                'ID' INT(11) NOT NULL AUTO_INCREMENT,
+                                id MEDIUMINT NOT NULL AUTO_INCREMENT,
                                 PRIMARY KEY ('ID')
                                 Name VARCHAR(30) NOT NULL,
                                 Gender VARCHAR(10) NOT NULL,
@@ -21,7 +21,7 @@ $sql = "CREATE TABLE klientai (
                                 Phone INT(9),
                                 Mail VARCHAR(100),
                                 Comment TEXT,
-                                PRIMARY KEY ('ID')
+                                PRIMARY KEY (id)
                                 )";
 
 if (mysqli_query($conn, $sql)) {
