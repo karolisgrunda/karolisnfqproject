@@ -1,6 +1,6 @@
 <?php
 /*Prisijungimas prie duomenų bazės*/
-$con = mysqli_connect("localhost","bc27a370ba310d","39f73031","heroku_fb27e899e9e6887");
+$con = mysqli_connect("eu-cdbr-west-01.cleardb.com","bc27a370ba310d","39f73031","heroku_fb27e899e9e6887");
 
 if (mysqli_connect_errno())
   {
