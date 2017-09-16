@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <title>NFQ akademijos u&#382;duotis</title>
-        <link rel="icon" type="image/png" href="../images/icon.png">
+        <link rel="icon" type="image/png" href="images/icon.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -46,18 +46,16 @@
         <?php
                 $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
                 while ($row = $stmt->fetch()){
-                echo '<tr>' .
-                
-                    '<td>' . $row['id'] . '</td>' .
-                     '<td>' . $row['Name'] . '</td>' .
-                     '<td>' . $row['Gender'] . '</td>' .
-                     '<td>' . $row['Weight'] . '</td>' .
-                     '<td>' . $row['Height'] . '</td>'.
-                     '<td>' . $row['Phone'] . '</td>' .
-                     '<td>' . $row['Mail'] . '</td>'.
-                     '<td>' . $row['Comment'] . '</td> </tr>' ;
-                    
-              
+                  echo '<tr>' .
+                  '<td>' . $row['id'] . '</td>' .
+                  '<td>' . $row['Name'] . '</td>' .
+                  '<td>' . $row['Gender'] . '</td>' .
+                  '<td>' . $row['Weight'] . '</td>' .
+                  '<td>' . $row['Height'] . '</td>'.
+                  '<td>' . $row['Phone'] . '</td>' .
+                  '<td>' . $row['Mail'] . '</td>'.
+                  '<td>' . $row['Comment'] . '</td> </tr>' ;
+
               };
         ?>
       </tr>
