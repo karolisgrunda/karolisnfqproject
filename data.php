@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
         <title>NFQ akademijos u&#382;duotis</title>
@@ -27,7 +27,8 @@
     ];
     $pdo = new PDO($dsn, $user, $pass, $opt);
   ?>
-  <table class="table">
+
+  <table>
    <thead>
     <tr>
       <th>Numeris</th>
@@ -41,10 +42,8 @@
     </tr>
   </thead>
     <tbody>
-      
-            <tr>
-
-            <?php
+       <tr>
+        <?php
                 $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
                 while ($row = $stmt->fetch()){
                 echo '<tr>' .
@@ -58,11 +57,12 @@
                      '<td>' . $row['Mail'] . '</td>'.
                      '<td>' . $row['Comment'] . '</td> </tr>' ;
                     
-                
+              
               };
-            ?>
-            </tr>
-            </tbody>
-</table>
+        ?>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
