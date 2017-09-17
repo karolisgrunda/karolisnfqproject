@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-
+        <!-- Navigacija -->
         <nav class="navbar navbar-default " id="top">
         <div class="container">
             <div class="navbar-header">
@@ -29,19 +29,18 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="data.php">DUOMENYS</a></li>
                 <li><a href="#regform">ANKETA</a></li>
-                <!-- <li><a href="#social">SOCIALINIAI TINKLAI</a></li> -->
             </ul>
             </div>
         </div>
         </nav>
-    
+        <!-- logo ir paveiksliukas -->
         <header>
              <div class="container group" id="header">
                 <h1><span>PROJEKTAS PRIE ALAUS</span></h1>
              </div>
         </header>
 
-        <!-- Anketa -->
+        <!-- Vidurine panele -->
         <div class="long-bg container-fluid">
             <div class="container" id="anketa">
                 <div class="row">
@@ -76,7 +75,7 @@
                                     </div> 
                             </div>           
                     </div>
-
+                    <!-- Anketa -->
                     <div class="col-sm-6 anketos-bg">
                         <h3 class="center">Norint gauti sporto programa užsiregistruokite!</h3>
                         <br />
@@ -127,7 +126,6 @@
                 <p>Karolis Grunda NFQ project 2017</p>
             </div>
         </footer>
-
 
         <script>
                $(function() {

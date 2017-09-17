@@ -21,10 +21,10 @@
     <h2>Užsakovų sąrašas</h2>
   </div>
   <?php
-    $host = 'eu-cdbr-west-01.cleardb.com';
-    $db   = 'heroku_fb27e899e9e6887';
-    $user = 'bc27a370ba310d';
-    $pass = '39f73031';
+    $host = '';
+    $db   = '';
+    $user = '';
+    $pass = '';
 
     $dsn = "mysql:host=$host;dbname=$db";
     $opt = [
@@ -90,17 +90,14 @@
             endwhile;
             ?>
         </tr>
-      </tbody>
-      
-        
+      </tbody>    
     </table>
+    
     <ul class="pagination">
     <?php
-    
         for ($i=1; $i <= $total_pages ; $i++):
     ?>
     <?php
-  
     echo '<li><a href="?page='.$i.'"';
         if ($i==$page)  echo ' class="abold"';
     echo '>'.$i.'</a></li>'; 
@@ -109,9 +106,6 @@
         endfor; 
     ?>
     </ul>
-
-
   </div>
-
 </body>
 </html>
