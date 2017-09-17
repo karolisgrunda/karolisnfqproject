@@ -13,9 +13,8 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="container ">
-    <br />
-    <a href="index.php"><button type="button" class="btn btn-default">Grįžti į puslapį</button></a>
+  <div class="container">
+    <h4><a href="index.php">Grįžti į puslapį</a></h4>
   </div>
   <div class="container text-center">
     <h2>Užsakovų sąrašas</h2>
@@ -35,8 +34,8 @@
     $pdo = new PDO($dsn, $user, $pass, $opt);
   ?>
   <div class="container">
-    <table class="table table-striped table-bordered">
-    <thead class="">
+    <table class="table">
+    <thead>
       <tr>
         <!-- <th>Numeris</th> -->
         <th>Vardas</th>
@@ -50,30 +49,9 @@
     </thead>
       <tbody>
         <tr>
-        <?php
-            $limit = 10;
-            $query = "SELECT * FROM klientai";
-
-            $s = $pdo->prepare($query);
-            $s->execute();
-            $total_results = $s->rowCount();
-            $total_pages = ceil($total_results/$limit);
-
-            if (!isset($_GET['page'])) {
-                $page = 1;
-            } else{
-                $page = $_GET['page'];
-            }
-
-            $starting_limit = ($page-1) * $limit;
-            $show  = "SELECT * FROM klientai ORDER BY id DESC LIMIT $starting_limit, 
-                                $limit";
-
-            $stmt = $pdo->query($show);
-            $stmt->execute();
-
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)):
-
+          <?php
+                  $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
+                  while ($row = $stmt->fetch()){
                     echo '<tr>' .
                    /* '<td>' . $row['id'] . '</td>' . */
                     '<td>' . $row['Name'] . '</td>' .
@@ -84,31 +62,11 @@
                     '<td>' . $row['Mail'] . '</td>'.
                     '<td>' . $row['Comment'] . '</td> </tr>' ;
 
-            
-            ?>
-            <?php 
-            endwhile;
-            ?>
+                };
+          ?>
         </tr>
       </tbody>
-      
-        
     </table>
-    <ul class="pagination">
-    <?php
-    
-        for ($i=1; $i <= $total_pages ; $i++):
-    ?>
-    <?php
-    echo "<li><a href='?page=".$i."'";
-        if ($i==$page)  echo " class='tuscia'";
-    echo ">".$i."</a></li>"; 
-    ?>
-    <?php 
-        endfor; 
-    ?>
-    </ul>
-
 
   </div>
 

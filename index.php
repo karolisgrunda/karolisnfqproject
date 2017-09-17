@@ -119,11 +119,13 @@
             </div>
         </div>
         <!-- Footer -->
-        <footer class="container-fluid text-center" id="social">
-                <a href="#top" title="Į viršų">
-                    <span class="glyphicon glyphicon-chevron-up totop"></span>
-                </a>
-                <p>Karolis Grunda NFQ project 2017</p>
+        <footer class="container-fluid text-center footer" id="social">
+          
+            <a href="#top" title="Į viršų">
+                <span class="glyphicon glyphicon-chevron-up totop"></span>
+            </a>
+            <p>Karolis Grunda NFQ project 2017</p>
+            
         </footer>
 
 

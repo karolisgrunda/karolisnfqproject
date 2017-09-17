@@ -66,3 +66,7 @@
         color: #FF00DD;
 
     }
+    footer{
+        min-height:100px;
+        position: absolute;
+    }
