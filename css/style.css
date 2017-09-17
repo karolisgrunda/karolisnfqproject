@@ -11,7 +11,6 @@
 		border-radius: 0;
 		margin-bottom: 0;
 		font-size: 12px;
-        letter-spacing: 5px;
         background-color: #FFFFFF;
 	}
 	.navbar-nav  li a:hover {
@@ -65,14 +64,5 @@
     }
     .totop{
         color: #FF00DD;
-        margin-top: 20px;
-        font-size: 20px;
-    }
-    .apacia{
-        height: 100px;
-    }
-    .bottomicons{
-        color: #FF00DD;
-        margin-top: 20px;
 
     }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NFQ akademijos u&#382;duotis</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="datafiller.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <p id="test"></p>
+
+    <script type="text/javascript" >
+    var text = "";
+    var i;
+       for(i = 0; i < 10 ; i++){
+            var data = generatorius();
+                $.post("tomysql.php", { 
+                    VARDAS: data[0], 
+                    LYTIS: data[1],
+                    SVORIS: data[2], 
+                    UGIS: data[3], 
+                    TELEFONAS: data[4], 
+                    PASTAS: data[5], 
+                    KOMENTARAS: data[6], 
+                
+                } );
+            
+            var z = generatorius();
+            text += z[0] + ' ' + z[1] + ' ' + z[2] + ' ' + z[3] + ' ' + z[4] + ' ' + z[5] + ' ' + z[6] + '<br />';
+            
+        }
+    document.getElementById("test").innerHTML = text;
+    </script>
+
+
+</body>
+</html>
