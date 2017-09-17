@@ -37,7 +37,7 @@
     <table class="table">
     <thead>
       <tr>
-        <th>Numeris</th>
+        <!-- <th>Numeris</th> -->
         <th>Vardas</th>
         <th>Lytis</th>
         <th>Svoris</th>
@@ -53,7 +53,7 @@
                   $stmt = $pdo->query('SELECT id, Name, Gender, Weight, Height, Phone, Mail, Comment FROM klientai');
                   while ($row = $stmt->fetch()){
                     echo '<tr>' .
-                    '<td>' . $row['id'] . '</td>' .
+                   /* '<td>' . $row['id'] . '</td>' . */
                     '<td>' . $row['Name'] . '</td>' .
                     '<td>' . $row['Gender'] . '</td>' .
                     '<td>' . $row['Weight'] . '</td>' .
