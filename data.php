@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="container">
-    <h4><a href="index.html">Grįžti į puslapį</a></h4>
+    <h4><a href="index.php">Grįžti į puslapį</a></h4>
   </div>
   <div class="container text-center">
     <h2>Užsakovų sąrašas</h2>
