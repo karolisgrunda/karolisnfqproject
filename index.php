@@ -82,7 +82,7 @@
                         <br />
                         <form id="regform" name="regform" data-toggle="validator" role="form">
                             <div class="form-group">
-                                <label for="vardas" class="control-label" >.jūsų vardas</label>
+                                <label for="vardas" class="control-label" >Vardas</label>
                                 <input type="text" class="form-control" maxlength="29" name="VARDAS" placeholder="Vardenis" required>
                             </div>
                             <div class="form-group">
@@ -90,27 +90,27 @@
                                 <label class="radio-inline"><input type="radio" name="LYTIS" value="MOTERIS"required>Moteris</label>
                             </div>
                             <div class="form-group">
-                                    <label for="svoris">.svoris</label>
+                                    <label for="svoris">Svoris</label>
                                     <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}" maxlength="3" name="SVORIS" placeholder="Jūsų svoris kilogramais" required>
                             </div>
                             <div class="form-group">
-                                    <label for="ugis">.ugis</label>
+                                    <label for="ugis">Ugis</label>
                                     <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}"  name="UGIS" placeholder="Jūsų ūgis centimetrais" required>
                             </div>
                             <div class="form-group">
-                                    <label for="telefonas">.telefonas</label>
+                                    <label for="telefonas">Telefonas</label>
                                     <input type="text" class="form-control" maxlength="8" pattern="[0-9]{8,}"  placeholder="6*******" name="TELEFONAS">
                             </div>
                             <div class="form-group">
-                                    <label for="pastas">.el. paštas</label>
+                                    <label for="pastas">El. paštas</label>
                                     <input type="email" class="form-control" name="PASTAS" data-error="Bruh, that email address is invalid" required placeholder="vardenis@gmail.com" >
                             </div> 
                             <div class="form-group">
-                                    <label for="comment">.ko tikitės iš trenerio</label>
+                                    <label for="comment">Ko tikitės iš trenerio</label>
                                     <textarea class="form-control" rows="5" maxlength="250" name="KOMENTARAS" required></textarea>
                             </div>
   
-                                    <button type="submit" class="btn btn-block">siūsti 
+                                    <button type="submit" class="btn btn-block">siųsti 
                                     <span class="glyphicon glyphicon-ok"></span>
                                     </button>
                          </form>
