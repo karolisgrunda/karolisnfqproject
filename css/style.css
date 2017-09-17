@@ -64,12 +64,17 @@
     }
     .totop{
         color: #FF00DD;
+        margin-top: 30px;
+        font-size: 30px;
 
     }
-    footer{
-        min-height:100px;
-        position: absolute;
+    .footer
+    {
+        height: 80px;
     }
-   .abold{
+    .abold{
         font-weight: bold !important;
+    }
+    .footer p{
+        margin-top: 20px;
     }

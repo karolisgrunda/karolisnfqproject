@@ -94,7 +94,7 @@
                                     <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}" maxlength="3" name="SVORIS" placeholder="Jūsų svoris kilogramais" required>
                             </div>
                             <div class="form-group">
-                                    <label for="ugis">Ugis</label>
+                                    <label for="ugis">Ūgis</label>
                                     <input type="text" class="form-control" maxlength="3" pattern="[0-9]{2,}"  name="UGIS" placeholder="Jūsų ūgis centimetrais" required>
                             </div>
                             <div class="form-group">
@@ -119,13 +119,13 @@
             </div>
         </div>
         <!-- Footer -->
-        <footer class="container-fluid text-center" id="social">
-          
-            <a href="#top" title="Į viršų">
-                <span class="glyphicon glyphicon-chevron-up totop"></span>
-            </a>
-            <p>Karolis Grunda NFQ project 2017</p>
-            
+        <footer>
+            <div class="container-fluid text-center footer" >
+                <a href="#top" title="Į viršų">
+                    <span class="glyphicon glyphicon-chevron-up totop"></span>
+                </a>
+                <p>Karolis Grunda NFQ project 2017</p>
+            </div>
         </footer>
 
 
