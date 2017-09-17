@@ -100,9 +100,10 @@
         for ($i=1; $i <= $total_pages ; $i++):
     ?>
     <?php
-    echo "<li><a href='?page=".$i."'";
-        if ($i==$page)  echo " class='tuscia'";
-    echo ">".$i."</a></li>"; 
+  
+    echo '<li><a href="?page='.$i.'"';
+        if ($i==$page)  echo ' class="abold"';
+    echo '>'.$i.'</a></li>'; 
     ?>
     <?php 
         endfor; 

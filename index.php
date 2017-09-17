@@ -119,7 +119,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <footer class="container-fluid text-center footer" id="social">
+        <footer class="container-fluid text-center" id="social">
           
             <a href="#top" title="Į viršų">
                 <span class="glyphicon glyphicon-chevron-up totop"></span>
@@ -140,7 +140,7 @@
                         cache: false,
                         success: function(result){ 
                             $('#regform')[0].reset();
-                            alert('SVEIKINAME UŽSIREGISTRAVUS!!!');
+                            alert('SVEIKINAME UŽSIREGISTRAVUS!!! Laukite kol su jumis bus susisiekta.');
                             }
                         });
                     });
