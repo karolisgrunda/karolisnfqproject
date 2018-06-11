@@ -1,3 +1,3 @@
 # karolisnfqproject
-Gyvas tinklapio vaizdas
-[Tinklapis](https://karolisnfqproject.herokuapp.com/)
+
+[Gyvas tinklapio vaizdas](https://karolisnfqproject.herokuapp.com/)
