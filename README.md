@@ -1,3 +1,3 @@
 # karolisnfqproject
 Gyvas tinklapio vaizdas
-![](https://karolisnfqproject.herokuapp.com/)
+[](https://karolisnfqproject.herokuapp.com/)
